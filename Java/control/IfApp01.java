@@ -1,6 +1,6 @@
 package Java.control;
 
-public class ifApp01 {
+public class IfApp01 {
     public static void main(String[] args) {
 
         /*
