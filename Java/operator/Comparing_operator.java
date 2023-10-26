@@ -1,6 +1,6 @@
 package Java.operator;
 
-public class comparing_operator {
+public class Comparing_operator {
     public static void main(String[] args) {
 
         /*
