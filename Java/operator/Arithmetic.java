@@ -1,6 +1,6 @@
 package Java.operator;
 
-public class arithmetic {
+public class Arithmetic {
     public static void main(String[] args) {
 
         /*
