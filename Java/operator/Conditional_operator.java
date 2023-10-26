@@ -1,6 +1,6 @@
 package Java.operator;
 
-public class conditional_operator {
+public class Conditional_operator {
     public static void main(String[] args) {
 
         /*
