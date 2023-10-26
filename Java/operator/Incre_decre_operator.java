@@ -1,6 +1,6 @@
 package Java.operator;
 
-public class incre_decre_operator {
+public class Incre_decre_operator {
     public static void main(String[] args) {
 
 
