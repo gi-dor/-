@@ -46,9 +46,8 @@ public class ScannerApp02 {
         int endMinutes = 0;
 
         // startMinutes + runningTime이 60의 보다 클 떄
-        // 둘이 더한 값은 최종 진행된 minutes이됨
-        // increMinutes / 60 하고 나온 값으로 startHours + increMinutes
-        //
+        // 둘이 더한 값은 endminutes이됨
+        // endMinutes >= 60 일 때 는?
         //
 
         // ========= 예상 완료 계산========================
@@ -56,13 +55,13 @@ public class ScannerApp02 {
             // 총 분 구하기
             int totalMinutes = startMinutes + runningTime;
             // 총 분 구한뒤에 60으로 나누어서 시간 증가 시키기
-            int increseHours = totalMinutes / 60;
+            int increseHours = totalMinutes / 60;  // total / 60 -> 몫 값이 나오겠지 ? 그 몫값을 더하는거야 !
 
             // 완료 시점은 시간은 시작시간 + 증가한 시간
-            endHours = startHours + increseHours;
+            endHours = startHours + increseHours; // 60으로 나누고 나온 결과값이랑 시작 시간 이랑 더하면 최종 시간이되지!
             // 완료 시점의 분은 60으로 나누고 나서 나온 나머지 값이 분이됨
-//			endMinutes = totalMinutes % 60;
-            endMinutes = totalMinutes - (increseHours * 60);
+			endMinutes = totalMinutes % 60;    // 이제 다시 total에서 나머지 값을 구하면 그거시 바로 분이 되는거야 !
+//            endMinutes = totalMinutes - (increseHours * 60);
 
         } else {
             endHours = startHours;
