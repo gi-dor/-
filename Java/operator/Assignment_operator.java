@@ -1,6 +1,6 @@
 package Java.operator;
 
-public class assignment_operator {
+public class Assignment_operator {
     public static void main(String[] args) {
 
         /*
