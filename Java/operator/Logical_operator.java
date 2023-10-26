@@ -1,6 +1,6 @@
 package Java.operator;
 
-public class logical_operator {
+public class Logical_operator {
     public static void main(String[] args) {
 	/*
 		 * 논리 연산자
