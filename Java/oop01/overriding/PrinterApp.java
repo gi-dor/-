@@ -16,6 +16,10 @@ public class PrinterApp {
         // 제약 조건으로 접근제어자는 조상보다 좁은 범위로 변경할수 없다
         // 선언부가 조상클래스의 메서드와 일치해야한다
         // 예외는 조상클래스의 메서드보다 많이 선언 할수 없다 - 객체지향 이후에 배운다
+        System.out.println("-------------------------------테스트-----------------------------");
+        ColorPrinter2 cp2 = new ColorPrinter2();
+        cp2.print();
+
         System.out.println();
         PhotoPrinter ph = new PhotoPrinter();
         ph.print();
