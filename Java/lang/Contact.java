@@ -1,4 +1,4 @@
-package Java.api.lang;
+package Java.lang;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package Java.api.lang;
+package Java.lang;
 
 public class ContactApp {
     public static void main(String[] args) {
