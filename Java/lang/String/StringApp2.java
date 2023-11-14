@@ -1,4 +1,4 @@
-package Java.lang;
+package Java.lang.String;
 
 public class StringApp2 {
     public static void main(String[] args) {
@@ -11,11 +11,11 @@ public class StringApp2 {
          *
          *
          */
-        String s3 ="안녕하세요";
+        String s3 = "안녕하세요";
         String s4 = "";
         String s5 = "    ";
-        System.out.println("길이1 : "+ s3.length());
-        System.out.println("길이1 : "+ s4.length());
+        System.out.println("길이1 : " + s3.length());
+        System.out.println("길이1 : " + s4.length());
         System.out.println();
 
         /*
@@ -45,7 +45,7 @@ public class StringApp2 {
          */
 
         String str6 = "ERP 코퍼레이션";
-        System.out.println("문자열을 포함하는가 : "+str6.contains("코퍼"));
+        System.out.println("문자열을 포함하는가 : " + str6.contains("코퍼"));
 
         /*
          * boolean startsWith(String prefix)
@@ -56,9 +56,9 @@ public class StringApp2 {
         String str8 = "https://localhost/8080/intdex.html";
         String str9 = "https://kmooc.udemy.com/organization/home/";
 
-        System.out.println("문자열이 https로 시작하는가 :" + str7.startsWith("https"));
-        System.out.println("문자열이 https로 시작하는가 :" + str8.startsWith("https"));
-        System.out.println("문자열이 http로 시작하는가 :" + str9.startsWith("http"));
+        System.out.println("문자열이 https 시작 하는가 :" + str7.startsWith("https"));
+        System.out.println("문자열이 https 시작 하는가 :" + str8.startsWith("https"));
+        System.out.println("문자열이 http 시작 하는가 :" + str9.startsWith("http"));
         System.out.println();
 
 
@@ -70,9 +70,9 @@ public class StringApp2 {
         String str11 = "sample2.xlsx";
         String str12 = "sample.xml";
 
-        System.out.println("엑셀 파일인가 ? : "+str10.endsWith("xlsx"));
-        System.out.println("엑셀 파일인가 ? : "+str11.endsWith("xlsx"));
-        System.out.println("엑셀 파일인가 ? : "+str12.endsWith("xlsx"));
+        System.out.println("엑셀 파일인가 ? : " + str10.endsWith("xlsx"));
+        System.out.println("엑셀 파일인가 ? : " + str11.endsWith("xlsx"));
+        System.out.println("엑셀 파일인가 ? : " + str12.endsWith("xlsx"));
         System.out.println();
 
 
