@@ -1,4 +1,4 @@
-package Java.lang;
+package Java.lang.System;
 
 import java.util.Properties;
 
@@ -12,7 +12,7 @@ public class SystemApp {
          */
         long unixTime = System.currentTimeMillis();
 
-        System.out.println("유닉스타임 : "+ unixTime);
+        System.out.println("유닉스타임 : " + unixTime);
 
         Properties props = System.getProperties();
         System.out.println(props);
@@ -27,11 +27,11 @@ public class SystemApp {
         String value4 = System.getProperty("user.home");
         String value5 = System.getProperty("user.dir");
 
-        System.out.println("언어 : " + value1);				//		언어 : ko
-        System.out.println("국가 : " + value2); 			    //		국가 : KR
-        System.out.println("사용자 이름: " + value3); 		//		사용자 이름: Han
+        System.out.println("언어 : " + value1);                //		언어 : ko
+        System.out.println("국가 : " + value2);                //		국가 : KR
+        System.out.println("사용자 이름: " + value3);        //		사용자 이름: Han
         System.out.println("홈 디렉토리 경러 : " + value4);    //홈 디렉토리 경러 : C:\Users\Han
-        System.out.println("현재 디렉토리 : " + value5); 	    // C:\workspace\Java-workspace\api
+        System.out.println("현재 디렉토리 : " + value5);        // C:\workspace\Java-workspace\api
 
 
         /*
@@ -43,8 +43,8 @@ public class SystemApp {
         String env2 = System.getenv("PATH");
         String env3 = System.getenv("TEMP");
 
-        System.out.println("자바 홈 디렉토리 : "+env1); 	// 자바 홈 디렉토리 : C:\Program Files\Java\jdk-17
-        System.out.println("path 설정된 경로  : "+env2);
-        System.out.println("임시 디렉토리 경로 : "+env3); 	// 임시 디렉토리 경로 : C:\Users\Han\AppData\Local\Temp
+        System.out.println("자바 홈 디렉토리 : " + env1);    // 자바 홈 디렉토리 : C:\Program Files\Java\jdk-17
+        System.out.println("path 설정된 경로  : " + env2);
+        System.out.println("임시 디렉토리 경로 : " + env3);    // 임시 디렉토리 경로 : C:\Users\Han\AppData\Local\Temp
     }
 }
