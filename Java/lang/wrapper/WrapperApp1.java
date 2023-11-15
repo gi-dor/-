@@ -1,4 +1,4 @@
-package Java.wrapper;
+package Java.lang.wrapper;
 
 public class WrapperApp1 {
 
