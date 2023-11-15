@@ -1,4 +1,4 @@
-package Java.wrapper;
+package Java.lang.wrapper;
 
 public class WrapperApp3 {
 
@@ -6,7 +6,7 @@ public class WrapperApp3 {
 
         /*
         문자열을 숫자(정수, 실수)로 변환하기
-            - Wrapper 클래스의 정적 메서드를 활용하면 문자열을 숫자ㅗ 변환할 수 이싿
+            - Wrapper 클래스의 정적 메서드를 활용하면 문자열을 숫자로 변환할 수 있다
 
             int Integer.parseInt(String str)
             long Long.parseLong(String str)
@@ -16,13 +16,11 @@ public class WrapperApp3 {
             Long Long.valueOf(String str)
             Double Double.valueOf(String str)
 
-            숫자를 문자열로 변환하기
+         숫자를 문자열로 변환하기
             - String 클래스 정적메서드를 활용하면 문자열로 변환할 수 있다.
                 String String.valueOf(int value)
                 String String.valueOf(long value)
                 String String.valueOf(double value)
-
-
          */
 
         int a = Integer.parseInt("123");
