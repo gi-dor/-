@@ -1,4 +1,4 @@
-package Java.wrapper;
+package Java.lang.wrapper;
 
 public class IntegerApp1 {
 
@@ -8,13 +8,13 @@ public class IntegerApp1 {
         Integer
             - int의 wrapper 클래스
 
-            - 주요 상수
+            - 상수
                 MAX_VALUE
                     int 기본 자료형의 최대값
                 MIN_VALUE
                     int 기본 자료형의 최소값
-            - 주요 메서드
-                정적 메서드
+            -  메서드
+                클래스 메서드
                     int Integer.parseInt(String str)
                     전달받은 문자열(숫자로 구성된 문자열)
 
@@ -66,8 +66,8 @@ public class IntegerApp1 {
         int f = Integer.parseInt("100", 2);
 
         System.out.println("parseInt()");
-        System.out.println("a : " + a); // 100가 대입된다
-        System.out.println("b : " + b); // "34"가 아닌 34가 대입된다
+        System.out.println("a : " + a); // 100 대입
+        System.out.println("b : " + b); // "34" 아닌 34가 대입된다
         System.out.println("16진수 100 : " + c);
         System.out.println("10진수 100 : " + d);
         System.out.println("8진수 100 : " + e);
