@@ -15,7 +15,8 @@ public class TreeSetApp2 {
 
         Random random = new Random();
         TreeSet<Integer> lotto = new TreeSet<>();
-        // 중복체크 , 자동정렬 Set에서 해줌 개꿀
+        // - TreeSet<E> 사용
+        // 중복 값은 저장하지 않음 , 자동정렬 오름차순으로  해줌 개꿀
 
         while (true) {
             int num = random.nextInt(45) + 1;
