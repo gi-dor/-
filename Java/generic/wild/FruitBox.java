@@ -1,4 +1,4 @@
-package Java.generic;
+package Java.generic.wild;
 
 /*
 <T extends 타입> 으로 타입 파라미터의 타입을 제한 할수 있다.

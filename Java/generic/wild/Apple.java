@@ -1,4 +1,4 @@
-package Java.generic;
+package Java.generic.wild;
 
 public class Apple extends Fruit {
 
