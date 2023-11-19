@@ -41,9 +41,11 @@ public class ScoreRepository {
     매개변수: X
      */
 
+    @SuppressWarnings("unchecked")
     public List<Score> findAll() {
-        return list;
+        return (List<Score>) list.clone();
     }
+
 
     // 학번을 전달받아서 해당 학번의 성적 정보를 제공하는 메서드
         /*
