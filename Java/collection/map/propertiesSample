@@ -1,0 +1,43 @@
+properties 파일
+xml 파일
+json 파일
+yaml 파일
+
+-----------------------------------------
+config.properties
+email.server.ip = 192.168.10.12
+eamil.server.port = 3000
+email.server.user = admin
+email.server.password = zxcv1234
+
+------------------------------------------
+config.yaml
+email :
+ server :
+   ip : 192.168.10.12
+   port : 3000
+   user : admin
+   password : zxcv1234
+
+------------------------------------------
+config.json
+{"email":
+ {
+  "ip":"192.168.10.12",
+  "port":3000,
+  "user":"admin",
+  "password":"zxcv1234"
+ }
+}
+
+------------------------------------------
+config.xml
+<?xml version="1.0" enconfig="utf-8"?>
+<config>
+	<email>
+		<ip>192.168.10.12</ip>
+		<port>3000</port?
+		<user>admin</user>
+		<password>zxcv1234</password>
+	</email>
+</config>
