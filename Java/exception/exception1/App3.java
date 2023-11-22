@@ -1,4 +1,4 @@
-package Java.exception;
+package Java.exception.exception1;
 
 import java.io.FileWriter;
 import java.io.IOException;
