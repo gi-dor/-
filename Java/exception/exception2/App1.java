@@ -1,4 +1,4 @@
-package Java.exception2;
+package Java.exception.exception2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,6 +45,8 @@ public class App1 {
             // 1. 예외 발생내용을 로그에 기록
             // 2. 오류메세지를 경고창 등을 통해 사용자에게 알려주기
             // 3. 오류를 수정할 수 있도록 수행문 실행
+            // ` 1번 3번은 프로그램 유지보수하는 개발자를 위한 처리
+            // ` 2번은 프로그램을 사용하는 사용자를 위한 처리
             ex.printStackTrace();
         } catch (Exception ex) {
             ex.printStackTrace();
