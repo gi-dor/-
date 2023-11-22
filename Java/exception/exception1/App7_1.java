@@ -1,4 +1,4 @@
-package Java.exception;
+package Java.exception.exception1;
 /*
 - final
 try 블럭의 수행문이 정상 수행되던지 , 오류가 발생 하던지에 , 상관없이  반드시 실행해야하는 수행문을 포함한 블럭
