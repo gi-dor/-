@@ -1,4 +1,4 @@
-package Java.exception;
+package Java.exception.exception1;
 
 public class NumberUtils {
 
