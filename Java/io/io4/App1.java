@@ -18,10 +18,11 @@ public class App1 {
                 URL 주소가 표현하는 자원을 읽어올 수 있다
          */
 
-        URL url = new URL("https://blog.naver.com/kalefarmer/220993056808");
+        URL url = new URL(
+                "https://i.namu.wiki/i/4jS7GoFSx9rwnrz5602uVxnSPraFAxFvBg-UoyuXVfVuU3O91BtqV7uF5SlHbdUd2_Vt9VxQc8QQsH5wNlwksrn-3DgnG65yFWbwJYEhpz4K_WWG5LoF_cP4N4xo2nxwrZOV8KsK0KQyxchSSM-38g.jpg");
 
         InputStream in = url.openStream();
-        FileOutputStream out = new FileOutputStream("C:/Users/Han/IdeaProjects/HTA/Java/io/io4/sa1mple.jpg");
+        FileOutputStream out = new FileOutputStream("C:/Users/Han/IdeaProjects/HTA/Java/io/io4/sample.jpg");
 
         IOUtils.copy(in, out);
     }
