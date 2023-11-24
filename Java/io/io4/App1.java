@@ -22,7 +22,7 @@ public class App1 {
                 "https://i.namu.wiki/i/4jS7GoFSx9rwnrz5602uVxnSPraFAxFvBg-UoyuXVfVuU3O91BtqV7uF5SlHbdUd2_Vt9VxQc8QQsH5wNlwksrn-3DgnG65yFWbwJYEhpz4K_WWG5LoF_cP4N4xo2nxwrZOV8KsK0KQyxchSSM-38g.jpg");
 
         InputStream in = url.openStream();
-        FileOutputStream out = new FileOutputStream("C:/Users/Han/IdeaProjects/HTA/Java/io/io4/sample.jpg");
+        FileOutputStream out = new FileOutputStream("Java/io/io4/sample.jpg");
 
         IOUtils.copy(in, out);
     }
