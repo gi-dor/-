@@ -51,7 +51,7 @@ public class OrderRepository {
             List<Order> orders = new ArrayList<Order>();
 
             // 해당 회차의 로또 구매정보가 저장된 파일의 전체 이름을 획득한다.
-            String path = "src/io8/" + lottoNo + ".csv";
+            String path = "Java/io/io8/" + lottoNo + ".csv";
             // 로또 구매정보가 기록된 파일을 표현하는 File객체를 생성한다.
             File file = new File(path);
             // 해당 파일이 이미 존재하지는 체크하고, 존재하지 않으면 빈 파일을 생성한다.
