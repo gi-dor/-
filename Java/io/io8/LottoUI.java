@@ -55,7 +55,7 @@ public class LottoUI {
 
         Order order = service.buy(orderAmount);
 
-        System.out.println("------------------------------------------------------");
+        System.out.println("----------------------------------------------");
         System.out.println("구매 내역");
         System.out.println("------------------------------------------------------");
         System.out.println("회차번호 : " + order.getLottoNo());
@@ -121,7 +121,6 @@ public class LottoUI {
     }
 
     private void 추첨() {
-
         System.out.println("<< 추첨 >>");
 
         System.out.println("### 이번 회차 로또 당첨번호를 추첨합니다.");

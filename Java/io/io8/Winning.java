@@ -6,8 +6,8 @@ public class Winning {
     private int rank;                // 당첨순위
     private Set<Integer> numbers;    // 로또번호
     private Set<Integer> correctNumbers;// 로또번호
-    private int count;              // 맞은 갯수
-    private boolean isWin;          // 당첨여부
+    private int count;                // 맞은 갯수
+    private boolean isWin;            // 당첨여부
 
     public Winning() {
     }
@@ -40,8 +40,8 @@ public class Winning {
         return isWin;
     }
 
-    public void setWin(boolean win) {
-        isWin = win;
+    public void setWin(boolean isWin) {
+        this.isWin = isWin;
     }
 
     public Set<Integer> getCorrectNumbers() {
@@ -51,4 +51,6 @@ public class Winning {
     public void setCorrectNumbers(Set<Integer> correctNumbers) {
         this.correctNumbers = correctNumbers;
     }
+
+
 }

@@ -8,18 +8,11 @@ import java.util.TreeSet;
 
 public class Order {
 
-    private int lottoNo;    // 회차번호
-    private long orderNo;    // 주문번호
-    private List<Set<Integer>> numbers; // 구매한 로또번호
-
+    private int lottoNo;                // 회차번호
+    private long orderNo;                // 주문번호
+    private List<Set<Integer>> numbers;    // 구매한 로또번호
 
     public Order() {
-    }
-
-    public Order(int lottoNo, long orderNo, List<Set<Integer>> numbers) {
-        this.lottoNo = lottoNo;
-        this.orderNo = orderNo;
-        this.numbers = numbers;
     }
 
     public int getLottoNo() {
@@ -46,7 +39,7 @@ public class Order {
         this.numbers = numbers;
     }
 
-    // 20231124:1700000000000:1,2,3,4,5,6/10,20,30,40,42/12,21,29,39,42
+    // 20231124:1700808801168:2,6,10,16,28,45/3,6,8,9,29,32
     public static Order toOrder(String text) {
         String[] items = text.split(":");
 
@@ -61,7 +54,6 @@ public class Order {
 
         return order;
     }
-
 
     // text는 2,6,10,16,28,45/3,6,8,9,29,32
     private static List<Set<Integer>> toList(String text) {
@@ -108,5 +100,4 @@ public class Order {
 
         return sb.toString();
     }
-
 }
