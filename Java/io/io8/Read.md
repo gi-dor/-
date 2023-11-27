@@ -25,3 +25,51 @@
 
 
 * 번호 추첨
+
+--------
+
+- Lotto.java - 로또 당첨 번호를 표현하는 클래스
+
+  회차번호 int no
+  로또번호 Set<Integer> numbers
+  보너스 번호 int bonus
+
+   <br> 
+
+- Order.java - 로또 구매정보를 표현하는 클래스
+
+      회차번호 int lottoNo
+      주문번호 long orderNo
+      구매한 로또번호 List<Set<Integer>> numbers;
+
+<br>
+
+- LottoRepository.java - 로또 당첨 번호에 대한 CRUD 담당하는 클래스
+    + lotto.csv 파일에 회차별 당첨 번호와 보너스 번호 정보를 기록한다
+
+<br>
+
+- OrderRepository.java - 로또 구매정보에 대한 CRUD 담당하는 클래스
+    + yyyyMMdd.csv 파일에 회차별 로또구매정보를 기록한다
+    + 각 파일은 회차별 (날짜) 로 관리된다
+
+<br>
+
+- LottoService.java - 로또 관련 서비스를 제공하는 클래스
+
+    + 구매서비스
+    + 구매 내역 조회서비스
+    + 추첨서비스
+    + 당첨확인 서비스
+
+<br>
+
+- LottoUi.java - 사용자와 상호작용을 담당하는 클래스
+
+
+- lotto.csv - 당첨번호가 관리되는 파일
+    + 회차번호 : 번호1 , 번호2 , 번호3....번호6 : 보너스번호
+
+
+- 23231124.csv - 23231124회차 구매정보가 관리되는 파일
+    + 회차번호 : 주문번호 : 번호1 번호2 번호3...번호6/번호1 번호2 번호3...번호6

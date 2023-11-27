@@ -12,7 +12,7 @@ public class LottoUI {
 
     private void showMenu() {
 
-        System.out.print(" << 메뉴 선택 >>");
+        System.out.println(" << 메뉴 선택 >>");
         System.out.println("---------------------------------------------------------");
         System.out.println("   1. 구매    2. 구매내역 조회   3. 당첨확인     4. 추첨       0 . 종료   ");
         System.out.println("---------------------------------------------------------");
@@ -98,11 +98,40 @@ public class LottoUI {
     }
 
     private void 당첨확인() {
+        System.out.println("<< 당첨 확인 >>");
 
+        System.out.println("### 회차번호와 주문번호를 입력하세요.");
+        System.out.print("### 회차번호:");
+        int lottoNo = scanner.nextInt();
+        System.out.print("### 주문번호:");
+        long orderNo = scanner.nextLong();
+
+        List<Winning> winnings = service.check(lottoNo, orderNo);
+
+        System.out.println("---------------------------------------------");
+        System.out.println("당첨 정보");
+        System.out.println("---------------------------------------------");
+        for (Winning winning : winnings) {
+            System.out.println("로또번호: " + winning.getNumbers());
+            System.out.println("당첨여부: " + winning.isWin());
+            System.out.println("맞은갯수: " + winning.getCount());
+            System.out.println("당첨순위: " + winning.getRank());
+            System.out.println("---------------------------------------------");
+        }
     }
 
     private void 추첨() {
 
+        System.out.println("<< 추첨 >>");
+
+        System.out.println("### 이번 회차 로또 당첨번호를 추첨합니다.");
+        Lotto lotto = service.lotto();
+
+        System.out.println("----------------------------------------------");
+        System.out.println("[" + lotto.getNo() + "] 회차 당첨번호");
+        System.out.println(lotto.getNumbers());
+        System.out.println("보너스 번호 : " + lotto.getBonus());
+        System.out.println("----------------------------------------------");
     }
 
     private void 종료() {

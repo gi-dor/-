@@ -1,6 +1,7 @@
 package Java.io.io8;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,40 +15,17 @@ public class OrderRepository {
 
     private List<Order> db = new ArrayList<Order>();
 
-
     public OrderRepository() {
-        // 이번 회차 로또 번호
-        int lottoNo = getLottoNo();
-        load(lottoNo);
+        load();
     }
 
-//    private void load(int lottoNo) {
-//        try {
-//            String path = "Java/io/io8/" + lottoNo + ".csv";
-//            BufferedReader reader = new BufferedReader(new FileReader(path));
-//
-//            String text = null;
-//            while ((text = reader.readLine()) != null) {
-//                db.add(Order.toOrder(text));
-//            }
-//            reader.close();
-//
-//        } catch (FileNotFoundException ex) {
-//            throw new RuntimeException("파일을 찾을수 없습니다 ", ex);
-//        } catch (IOException ex) {
-//            throw new RuntimeException("파일을 읽어오는 중 오류가 발생했습니다", ex);
-//        }
-//    }
-
-    private void load(int lottoNo) {
-        db = getOrders(lottoNo);
+    private void load() {
+        db = getOrders(getLottoNo());
     }
-
 
     private void stored() {
-        //20231124.csv에 저장
         try {
-            String path = "java/io/io8/" + getLottoNo() + ".csv";
+            String path = "Java/io/io8/" + getLottoNo() + ".csv";
             PrintWriter writer = new PrintWriter(path);
 
             for (Order order : db) {
@@ -56,21 +34,33 @@ public class OrderRepository {
 
             writer.flush();
             writer.close();
-
         } catch (FileNotFoundException ex) {
-            throw new RuntimeException("파일을 찾을수 없습니다", ex);
+            throw new RuntimeException("파일을 찾을 수 없습니다.", ex);
         }
-
     }
 
-
+    /**
+     * 지정된 회차의 로또구매정보를 반환한다.
+     *
+     * @param lottoNo 회차번호
+     * @return 해당 회차의 모든 로또구매정보
+     */
     public List<Order> getOrders(int lottoNo) {
         try {
+            // 해당 회차의 모든 로또구매정보를 저장하는 List객체를 생성한다.
             List<Order> orders = new ArrayList<Order>();
 
-            String path = "java/io/io8/" + lottoNo + ".csv";
+            // 해당 회차의 로또 구매정보가 저장된 파일의 전체 이름을 획득한다.
+            String path = "src/io8/" + lottoNo + ".csv";
+            // 로또 구매정보가 기록된 파일을 표현하는 File객체를 생성한다.
+            File file = new File(path);
+            // 해당 파일이 이미 존재하지는 체크하고, 존재하지 않으면 빈 파일을 생성한다.
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            // 해당 파일의 내용을 한 줄씩 읽어오는 BufferedReader객체를 생성한다.
             BufferedReader reader = new BufferedReader(new FileReader(path));
-
+            // 한 줄씩 로또 구매정보를 읽어서 Order객체를 생성하고, 위에서 생성한 List객체에 저장한다.
             String text = null;
             while ((text = reader.readLine()) != null) {
                 orders.add(Order.toOrder(text));
@@ -82,10 +72,8 @@ public class OrderRepository {
             throw new RuntimeException("파일을 찾을 수 없습니다.", ex);
         } catch (IOException ex) {
             throw new RuntimeException("파일을 읽어오는 중 오류가 발생하였습니다.", ex);
-
         }
     }
-
 
     public int getLottoNo() {
         LocalDate today = LocalDate.now();
@@ -97,9 +85,9 @@ public class OrderRepository {
      * 주문정보를 저장한다.
      */
     public void save(Order order) {
-        // 전달받은 주문정보를 ArrayList객체에 저장
+        // 전달받은 주문정보를 ArrayList객체에 저장한다.
         db.add(order);
-        // 변경된 정보를 파일에 저장
+        // 변경된 정보를 파일에 저장시킨다.
         stored();
     }
 
