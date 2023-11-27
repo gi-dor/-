@@ -9,7 +9,6 @@ import java.util.List;
 
 public class LottoRepository {
 
-
     private List<Lotto> lottos = new ArrayList<Lotto>();
 
     public LottoRepository() {
@@ -81,3 +80,9 @@ public class LottoRepository {
         return null;
     }
 }
+
+
+
+
+
+

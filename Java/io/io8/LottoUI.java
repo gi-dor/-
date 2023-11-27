@@ -1,24 +1,20 @@
 package Java.io.io8;
 
-import Java.io.io7.Scanner;
 import java.util.List;
 import java.util.Set;
 
 public class LottoUI {
 
-    LottoService service = new LottoService();
-    Scanner scanner = new Scanner(System.in);
+    private LottoService service = new LottoService();
+    private Scanner scanner = new Scanner(System.in);
 
 
     private void showMenu() {
+        System.out.println("----------------------------------------------");
+        System.out.println("1.구매 2.구매내역조회 3.당첨확인 4.추첨 0.종료");
+        System.out.println("----------------------------------------------");
 
-        System.out.println(" << 메뉴 선택 >>");
-        System.out.println("---------------------------------------------------------");
-        System.out.println("   1. 구매    2. 구매내역 조회   3. 당첨확인     4. 추첨       0 . 종료   ");
-        System.out.println("---------------------------------------------------------");
-
-        System.out.println();
-        System.out.println("메뉴 선택");
+        System.out.print("### 메뉴선택:");
         int menuNo = scanner.nextInt();
         System.out.println();
 
@@ -27,7 +23,7 @@ public class LottoUI {
                 구매();
                 break;
             case 2:
-                구매내역();
+                구매내역조회();
                 break;
             case 3:
                 당첨확인();
@@ -39,61 +35,58 @@ public class LottoUI {
                 종료();
                 break;
         }
+
+        System.out.println();
         System.out.println();
         System.out.println();
 
-
+        showMenu();
     }
 
-
     private void 구매() {
+        System.out.println("<< 구매하기 >>");
 
-        System.out.println(" << 구매  >>  ");
-        System.out.println("### 구매 금액을 입력 하세요");
-        System.out.print("## 구매금액 : ");
+        System.out.println("### 구매금액을 입력하세요.");
+        System.out.print("## 구매금액:");
         int orderAmount = scanner.nextInt();
 
         Order order = service.buy(orderAmount);
 
         System.out.println("----------------------------------------------");
-        System.out.println("구매 내역");
-        System.out.println("------------------------------------------------------");
-        System.out.println("회차번호 : " + order.getLottoNo());
-        System.out.println("주문번호 : " + order.getOrderNo());
-        System.out.println("------------------------------------------------------");
+        System.out.println("구매내역");
+        System.out.println("----------------------------------------------");
+        System.out.println("회차번호: " + order.getLottoNo());
+        System.out.println("주문번호: " + order.getOrderNo());
+        System.out.println("----------------------------------------------");
         List<Set<Integer>> numberList = order.getNumbers();
-
         for (Set<Integer> set : numberList) {
             System.out.println(set);
         }
+        System.out.println("----------------------------------------------");
 
-        System.out.println("-------------------------------------------------------");
     }
 
-    private void 구매내역() {
-        System.out.println("<<  구매 내역 확인 >>");
+    private void 구매내역조회() {
+        System.out.println("<< 구매 내역 확인 >>");
 
-        System.out.println("### 회차번화와 주문번호를 입력하세요");
-        System.out.print("### 회차번호 :");
+        System.out.println("### 회차번호와 주문번호를 입력하세요.");
+        System.out.print("### 회차번호:");
         int lottoNo = scanner.nextInt();
-        System.out.print("### 주문번호 :");
+        System.out.print("### 주문번호:");
         long orderNo = scanner.nextLong();
 
         Order order = service.getOrder(lottoNo, orderNo);
-
-        System.out.println("------------------------------------------------------");
-        System.out.println("구매 내역");
-        System.out.println("------------------------------------------------------");
-        System.out.println("회차번호 : " + order.getLottoNo());
-        System.out.println("주문번호 : " + order.getOrderNo());
-        System.out.println("------------------------------------------------------");
+        System.out.println("----------------------------------------------");
+        System.out.println("구매내역");
+        System.out.println("----------------------------------------------");
+        System.out.println("회차번호: " + order.getLottoNo());
+        System.out.println("주문번호: " + order.getOrderNo());
+        System.out.println("----------------------------------------------");
         List<Set<Integer>> numberList = order.getNumbers();
-
         for (Set<Integer> set : numberList) {
             System.out.println(set);
         }
-
-        System.out.println("-------------------------------------------------------");
+        System.out.println("----------------------------------------------");
 
     }
 
@@ -113,8 +106,8 @@ public class LottoUI {
         System.out.println("---------------------------------------------");
         for (Winning winning : winnings) {
             System.out.println("로또번호: " + winning.getNumbers());
-            System.out.println("당첨여부: " + winning.isWin());
             System.out.println("맞은갯수: " + winning.getCount());
+            System.out.println("맞은번호: " + winning.getCorrectNumbers());
             System.out.println("당첨순위: " + winning.getRank());
             System.out.println("---------------------------------------------");
         }
@@ -136,7 +129,6 @@ public class LottoUI {
     private void 종료() {
 
     }
-
 
     public static void main(String[] args) {
         LottoUI ui = new LottoUI();

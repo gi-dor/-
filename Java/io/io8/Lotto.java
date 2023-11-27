@@ -4,6 +4,9 @@ import java.util.Set;
 import java.util.StringJoiner;
 import java.util.TreeSet;
 
+/**
+ * 로또 추첨번호를 표현하는 클래스다.
+ */
 public class Lotto {
 
     private int no;
@@ -97,6 +100,5 @@ public class Lotto {
         }
         return set;
     }
-
 
 }
