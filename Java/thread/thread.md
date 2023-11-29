@@ -52,8 +52,12 @@
         }
     }
     
-            MyRunnable myRunnable = new MyRunnable();
-            Thread t1 = new Thread(myRunnable);
-            Thread t2 = new Thread(myRunnable);
-            Thread t3 = new Thread(myRunnable);
+            MyRunnable r = new MyRunnable();
+            Thread t1 = new Thread(r);
+            Thread t2 = new Thread(r);
+            Thread t3 = new Thread(r);
 
+📌 Runnable을 구현한 클래스의 인스턴스로 생성할 경우
+
+1. Runnable 인터페이스를 구현한 클래스의 객체 생성
+2. 이 객체를 Thread 클래스의 생성자의 매개변수로 제공해야한다.
