@@ -1,4 +1,4 @@
-package Java.thread3;
+package Java.thread.thread3;
 
 public class MyThread1 extends Thread {
 

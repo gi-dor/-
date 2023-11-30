@@ -1,4 +1,4 @@
-package Java.thread3;
+package Java.thread.thread3;
 
 import java.util.Vector;
 

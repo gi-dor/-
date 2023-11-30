@@ -1,4 +1,4 @@
-package Java.thread2;
+package Java.thread.thread2;
 
 public class ATMApp {
 

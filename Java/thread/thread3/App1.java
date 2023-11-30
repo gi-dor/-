@@ -1,4 +1,4 @@
-package Java.thread3;
+package Java.thread.thread3;
 
 public class App1 {
 
@@ -6,7 +6,7 @@ public class App1 {
 
         MyThread1 t1 = new MyThread1();
         t1.start();
-        
+
 
     }
 }
