@@ -29,7 +29,7 @@ where location_id = 1700;
 select *
 from jobs;
 
-select job_id, job_title, min_salary
+select job_id, job_title, min_salary, max_salary
 from jobs
 where min_salary >= 2000
   and min_salary <= 5000;
@@ -50,7 +50,7 @@ where manager_id = 100;
 select employee_id, first_name, salary, commission_pct
 from employees
 where department_id = 80
-  and salary > 8000;
+  and salary >= 8000;
 
 -- 직종아이디가 SA_REP이고, 커미션포인트가 0.25이상인 직원의 아이디, 이름, 급여, 커미션포인트를 조회하기
 select employee_id, first_name, salary, commission_pct
@@ -63,10 +63,10 @@ where job_id = 'SA_REP'
 -- 연봉 = (급여 + 급여x커미션)x12다
 select *
 from employees;
-select employee_id, first_name, salary, salary * 12 as 연봉
-from employees
-where department_id = 80
-  and salary >= 10000;
+SELECT EMPLOYEE_ID, FIRST_NAME, SALARY, (SALARY + SALARY * COMMISSION_PCT) * 12 ANNUAL_SALARY
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID = 80
+  AND SALARY >= 10000;
 
 
 -- 80번 부서에 근무하고, 147번 직원에게 보고하는 사원 중에서 커미션이 0.1인 직원의 아이디, 이름, 직종, 급여, 커미션포인트를 조회하기
