@@ -1,4 +1,4 @@
-package JDBC1;
+package JDBC.JDBC1;
 
 import static java.sql.DriverManager.getConnection;
 
