@@ -25,7 +25,7 @@ public class ProductDao {
                 from 
                     sample_products
                 order by
-                    prod_no
+                    prod_no desc
                     
                 """;
         List<Product> productList = new ArrayList<Product>();
@@ -150,7 +150,7 @@ public class ProductDao {
                 where 
                     PROD_PRICE BETWEEN ? AND ?
                 order by
-                    prod_no    
+                    prod_price asc   
                 """;
 
         List<Product> productList = new ArrayList<Product>();
