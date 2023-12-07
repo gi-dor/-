@@ -299,6 +299,7 @@ public class ProductDao {
 
     public void setUpdateByNo(int prodNo, int prodStock) throws SQLException {
 
+        // 사용할 SQL 쿼리문
         String sql = """
                 update SAMPLE_PRODUCTS
                 set     
@@ -307,12 +308,22 @@ public class ProductDao {
                     prod_no = ?
                         """;
 
+        /**
+         * Java Database Connectivity
+         * JDBC - 자바 프로그램에서 데이터베이스에 접속하고 상호작용 하기위한 API
+         */
+
+        // getConnection() 으로 Java 응용프로그램과 JDBC를 통해 DB연결
+        // 이 연결을 con 에 할당함 이제 JDBC를 통해 데이터를 읽거나 사용할수 있다
         Connection con = getConnection();
+
+        // 쿼리문을 (sql)를 PrepareStatement에 담음
         PreparedStatement pstmt = con.prepareStatement(sql);
 
         pstmt.setInt(1, prodStock);
         pstmt.setInt(2, prodNo);
 
+        // 변경사항이 있다면 적용하기위해 executeUpdate() 메서드를 사용
         pstmt.executeUpdate();
 
         pstmt.close();
