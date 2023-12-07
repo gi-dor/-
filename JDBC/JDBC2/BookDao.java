@@ -23,8 +23,9 @@ public class BookDao {
                 values
                 (?,?,?,?,?)
                 """;
-
+        // Java와 오라클을 연결한다
         Connection con = getConnection();
+        // 위에 String sql 쿼리문을
         PreparedStatement pstmt = con.prepareStatement(sql);
         pstmt.setInt(1, book.getNo());
         pstmt.setString(2, book.getTitle());
