@@ -10,6 +10,9 @@ import java.sql.SQLException;
  */
 @FunctionalInterface
 public interface RowMapper<T> {
+// RowMapper<T> 인터페이스는 ResultSet객체에서 현재 커서가 위치한 행의 데이터를
+    // 특정 객체에 담아서 반환하는 기능이 추상화 되어있다.
+
 
     /**
      * ResultSet객체에서 현재 커서가 위치한 행의 데이터를 객체로 변환한다.
@@ -19,4 +22,5 @@ public interface RowMapper<T> {
      * @throws SQLException
      */
     T mapRow(ResultSet rs) throws SQLException;
+
 }
