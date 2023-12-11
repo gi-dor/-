@@ -1,4 +1,4 @@
-### 1️⃣ EQUI JOIN
+### 🔸 EQUI JOIN
 
 등가 JOIN
 
