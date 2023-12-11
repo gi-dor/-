@@ -65,7 +65,8 @@ ANSI SQL은 여러 데이터베이스 시스템에서 호환되도록 설계되�
              where d.manager_id is not null;
 
 <br>
-❓  직원의 아이디 이름  소속부서아이디 소속부서명 직종아이디 직종이름 급여 조회
+
+❓ 직원의 아이디 이름 소속부서아이디 소속부서명 직종아이디 직종이름 급여 조회
 
             -- 직원의 아이디 이름  소속부서아이디 소속부서명 직종아이디 직종이름 급여 조회
             --        E     E       E                   E               E
@@ -88,6 +89,7 @@ ANSI SQL은 여러 데이터베이스 시스템에서 호환되도록 설계되�
                     JOIN jobs j ON e.job_id = j.job_id
                     JOIN departments d ON e.department_id = d.department_id;
 
+<br>
 ❓ 직원 아이디 , 직원이름 , 근무지역 도시명 조회
 
             -- 직원 아이디 , 직원이름 , 근무지역 도시명 조회
