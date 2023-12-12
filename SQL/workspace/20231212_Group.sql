@@ -197,27 +197,3 @@ where HIRE_DATE <= '2005-01-01'
 group by DEPARTMENT_ID
 having count(*) >= 5;
 
-/*
-SUB QUERY
-서브쿼리
-
-    select 문 내부에 정의된 select 문을 서브쿼리라 한다
-    서브쿼리는 where 절의 조건식에서 사용되는 값을 제공한다
-    조건식에서 사용되는 값이 sql을 실행 해야만 획득 가능한 값이 경우가 많다.
-
-    select 컬럼 , 컬럼
-    from 테이블명
-    where 조건식 연산자 ( select 컬럼
-                        from 테이블명
-                        [where 조건식])
-
-
-*/
-
-
--- 전체의 평균급여 보다 많이 받는 사람 찾기
-
-select EMPLOYEE_ID, FIRST_NAME, trunc(salary)
-from EMPLOYEES
-where salary > (select trunc(avg(salary))
-                from EMPLOYEES);
