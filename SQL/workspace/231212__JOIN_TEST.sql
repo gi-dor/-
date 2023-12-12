@@ -367,4 +367,24 @@ select *
 from employees
 where employee_id = 178;
 
-
+select e.employee_id,
+       e.first_name,
+       e.salary,
+       e.salary + e.salary * NVL(e.commission_pct, 0) as 커미션포함,
+       g.grade,
+       e.job_id,
+       j.job_TITLE,
+       d.department_id,
+       d.department_name,
+       l.city
+from employees e,
+     salary_grades g,
+     departments d,
+     locations l,
+     jobs j
+where e.salary <= g.max_salary
+  and e.salary >= g.min_salary
+  and e.department_id = d.department_id(+)
+  and d.location_id = l.location_id(+)
+  and j.JOB_ID = e.JOB_ID
+order by employee_id;
