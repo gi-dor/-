@@ -303,4 +303,25 @@ ANSI SQL은 여러 데이터베이스 시스템에서 호환되도록 설계되�
             mgr.first_name as mgr_name
     from employees emp , employees mgr
     where emp.manager_id = mgr.employee_id;
-    
+
+❓ 직원 아이디, 직원 이름 , 직원의 소속부서명 , 상사의 아이디 , 상사의 이름 , 상사의 소속부서명
+
+    -- 직원 아이디, 직원 이름 , 직원의 소속부서명 , 상사의 아이디 , 상사의 이름 , 상사의 소속부서명
+    --      E       E               E              E
+    --                              D1                                        D2
+    --                                              M               M
+
+    select emp.EMPLOYEE_ID 직원아이디,
+            emp.FIRST_NAME 직원이름,
+            d1.DEPARTMENT_NAME 직원의소속부서,
+            mgr.EMPLOYEE_ID 상사아이디,
+            mgr.FIRST_NAME 상사이름,
+            d2.DEPARTMENT_NAME 상사의부서
+    from employees emp, -- 직원
+         employees mgr, -- 관리자
+         departments d1,    -- 직원 부서
+         departments d2     -- 관리자 부서
+    where emp.MANAGER_ID = mgr.EMPLOYEE_ID(+) 
+      and emp.department_id = d1.DEPARTMENT_ID (+)
+      and mgr.DEPARTMENT_ID = d2.DEPARTMENT_ID (+)
+    order by emp.EMPLOYEE_ID;
