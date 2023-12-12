@@ -364,10 +364,10 @@ select emp.EMPLOYEE_ID    직원아이디,
        mgr.EMPLOYEE_ID    상사아이디,
        mgr.FIRST_NAME     상사이름,
        d2.DEPARTMENT_NAME 상사의부서
-from employees emp,
-     employees mgr,
-     departments d1,
-     departments d2
+from employees emp,  -- 직원
+     employees mgr,  -- 관리자
+     departments d1, -- 직원 부서
+     departments d2  -- 관리자 부서
 where emp.MANAGER_ID = mgr.EMPLOYEE_ID(+)
   and emp.department_id = d1.DEPARTMENT_ID (+)
   and mgr.DEPARTMENT_ID = d2.DEPARTMENT_ID (+)
