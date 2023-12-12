@@ -286,3 +286,21 @@ ANSI SQL은 여러 데이터베이스 시스템에서 호환되도록 설계되�
 ### 4️⃣ SELF JOIN
 
 자체 조인
+
+- JOIN 대상이 되는 테이블이 같은 테이블 일 때 발생 ㅡ 서로 연관지어서 조회할 때 사용
+- 하나의 테이블을 이용해서 JOIN구성 , 조회하는 컬럼명이 동일한 경우가 발생할 수 있음
+    + ✔ 별칭 적절히 사용
+- 서로 역할을 각각 나누어 별칭을 정하고 그 역할에 맞게 JOIN 조건 정의
+
+-----
+
+<br>
+❓ emplpyees 테이블에서 직원아이디 , 직원이름 , 해당직원의 상사아이디 , 상사 이름 조회
+
+      select emp.employee_id as emp_id,
+            emp.first_name as emp_name,
+            mgr.employee_id as mgr_id,
+            mgr.first_name as mgr_name
+    from employees emp , employees mgr
+    where emp.manager_id = mgr.employee_id;
+    
