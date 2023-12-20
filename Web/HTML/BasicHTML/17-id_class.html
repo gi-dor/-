@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            div{
+                border: 1px solid red;
+                margin-bottom: 10px;
+            }
+
+            #box-1{
+                background-color: beige;
+            }
+
+            .image-item {
+                width: 150px;
+                height: 100px;
+                opacity: 0.5;
+            }
+
+            .image-highlight{
+                opacity: 1.0;
+            }
+
+    </style>
+</head>
+<body>
+    
+
+
+<h1>아이디 와 클래스</h1>
+
+
+<!----------------
+    
+    id 속성
+        특정 엘리먼트 (태그 , 요소)를 식별하기위한 용도로 사용되는 속성
+        웹페이지 전체에서 똑같은 id속성값을 가진 태그는 없어야한다
+            id 속성 값은 고유해야 한다
+        id 속성 값은 숫자로 시작할수 없다
+        예시)   <div id = "wrapper">...</div>
+                <input type = "text" name = "userName" id="user_name"/> 
+
+
+    
+    class 속성
+            class 속성 값을 가진 엘리먼트들은 같은 스타일이 적용되게 하기 위한 용도로 사용된다
+            웹페이지 전체에서 똑같은 class 속성 값을 가진 태그는 여러개 있을 수 있다
+            class 속성은 속성 값을 여러개 가지는 것이 가능하다
+
+            예시 ) 
+            <div id = "image-gallary">
+                <img src="sample.jpg" class = "gallary-item"/>
+                <img src="sample.jpg" class = "gallary-item"/>
+                <img src="sample.jpg" class = "gallary-item"/>
+                <img src="sample.jpg" class = "gallary-item"/>
+            </div>
+
+
+    ---------------------------->
+
+
+<h2>id 실습</h2>
+
+<div id="box-1">
+    <h3>첫번째 박스</h3>
+</div>
+<div id="box-2">
+    <h3>두번째 박스</h3>
+</div>
+
+
+<h2>class 실습</h2>
+
+
+<div class="">
+    <img src="../image/space.jpg" class="image-item" />
+    <img src="../image/space.jpg" class="image-item image-highlight" />
+    <img src="../image/space.jpg" class="image-item" />
+    <img src="../image/space.jpg" class="image-item" />
+    <img src="../image/space.jpg" class="image-item" />
+</div>
+
+
+
+
+</body>
+</html>
