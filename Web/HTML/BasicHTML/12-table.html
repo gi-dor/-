@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>테이블의 셀 병합</h1>
+        <h3> 가로 혹은 세로 합치기</h3>
+
+        <!----------------------
+            <th> 와 <td>의 셀 병합 관련 속성
+
+                rowspan
+                해당 셀이 점유할 행의 수를 지정
+                세로방향 병합
+
+                colspan
+                해당 셀이 점유할 열의 수를 지정
+                가로방향 병합
+            
+            ------------------------>
+
+            <h2>가로방향 병합하기</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>이름</th>
+                        <th colspan="3">과목</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>국어</th>
+                        <th>영어</th>
+                        <th>수학</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>치우</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>달기</td>
+                        <td>85</td>
+                        <td>89</td>
+                        <td>92</td>
+                    </tr>
+                    <tr>
+                        <td>헌원</td>
+                        <td>98</td>
+                        <td>99</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>세로방향 병합하기</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>항목명</th>
+                        <th>값</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td rowspan="2">전화번호</td>
+                        <td>010-9999-9999</td>
+                    </tr>
+                    <tr>
+                        <td>010-8888-8888</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"> 배송지</td>
+                        <td>서울시 중구 을지로238</td>
+                    </tr>
+                    <tr>
+                        <td>서울시 중구 동호로287</td>
+                    </tr>
+                    <tr>
+                        <td>서울시 마포구 마포대로8</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+</body>
+</html>
