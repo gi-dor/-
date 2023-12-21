@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* 태그선택자 */
+    div{border: 1px dashed #ddd; 
+        padding: 10px; 
+        margin: 10px 0;}
+
+        /* 후손 선택자 */
+        클래스 선택자 .container인 요소의 모든 하위요소 중에서 요소를 선택
+        .container p {
+            border: 1px solid red; padding: 3px;
+        }
+
+        /* 자식 선택자 */
+        /* 클래스 선택자 container인 요소의 자식중에서 p인요소 */
+        .container > p {background-color: yellow;}
+
+        .container  div p {background-color: grey;}
+
+        /*  인접 형제 선택자       */
+        /* 아이디 속성 값이 heading인 요소와 바로 인접한 (바로 다음 등장하는) p 요소를선택 */
+        /* 네번째 단락중 첫번째가 선택 */
+        #heading + p {border: 2px solid magenta;}
+
+
+        /* 일반 형제 선택자 */
+        /* 아이디 속성값이 heading인 요소의 뒤에 위치하는 
+        모든 p요소를 선택 
+        네번째 단락이 전부 선택된다. */
+        #heading ~ p {background-color: aqua;}
+
+
+</style>
+</head>
+<body>
+    <h1>후손 , 자식 선택자</h1>
+
+
+<div class="container">
+    <h3>제목1</h3>
+
+    <p> 첫번째 단락 </p>
+    <p> 두번째 단락</p>
+
+    <div>
+        <p> 첫번째 단락</p>
+        <p> 두번째 단락</p>
+        <p> 세번째 단락</p>
+    </div>
+</div>
+
+
+<p>세번째 단락</p>
+<p>세번째 단락</p>
+<p>세번째 단락</p>
+
+
+
+
+
+<div>
+    <h3 id="heading">제목1</h3>
+<div></div>
+    <p>네번째 단락</p>
+    <p>네번째 단락</p>
+    <p>네번째 단락</p>
+</div>
+
+<div>
+    <p>다섯번째 단락</p>
+    <p>다섯번째 단락</p>
+    <p>다섯번째 단락</p>
+</div>
+
+
+
+
+</body>
+</html>
