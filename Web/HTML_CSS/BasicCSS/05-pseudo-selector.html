@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input 요소를 선택하고 그중 체크 상태인 요소의 입전해 있는  span 요소를 선택 */
+        input:checked + span{color: red; font-weight: bold;}
+
+        /* input 요소를 선택하고 그 중에서 비활성화 상태인 요소를 선택하고
+        그 요소에 인접한 span을 선택 */
+        input:disabled + span {color: gray; text-decoration: line-through;}
+    </style>
+</head>
+<body>
+    <h2>가상 UI 요소 상태 선택자</h2>
+    
+<form> 
+        <input type="radio" name="gender" value="female"/><span>여자</span><br>
+        <input type="radio" name="gender" value="male"/><span>남자</span><br>
+
+    <br>
+    <hr>
+
+
+        <input type="checkbox" name="skills" value="java"/><span>자바</span><br>
+        <input type="checkbox" name="skills" value="C"/><span>C언어</span><br>
+        <input type="checkbox" name="skills" value="python"/><span>파이썬</span><br>
+        <input type="checkbox" name="skills" disabled value="ruby"/><span>루비</span><br>
+        <input type="checkbox" name="skills" value="lisp"/><span>리스프</span>
+</form>
+</body>
+</html>
