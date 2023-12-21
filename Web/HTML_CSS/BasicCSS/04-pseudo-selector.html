@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.containr{
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+/* 가상클래스 선택자 */
+/* 클래스 속성값이 container의 하위 요소중에서 모든 P를 선택한 뒤에 
+선택된 P 중에 첫번째 자식인   요소를 선택 */
+.container p:first-child {background-color:  yellow;}
+
+/* 클래스 속성값이 container의 하위 요소중에서 모든 P를 선택한 뒤에 
+선택된 P 중에 마지막 자식인  요소를 선택 */
+.container p:last-child{background-color: magenta;}
+
+
+/* 클래스 속성값이 container의 하위 요소중에서 모든 P를 선택한 뒤에 
+선택된 P 중에 3번째 자식인 요소를 선택 */
+.container p:nth-child(3){background-color: gray;}
+
+
+/* 
+tbody의 하위 요소중에 모든 tr을 선택하고
+선택된 tr중에서 3n+1번째 자식 요소를 선택한다
+n은 0,1,2,3,4,5.... */
+tbody tr:nth-child(3n+1){background-color: #ddd;}
+
+
+</style>
+
+</head>
+<body>
+    <h1>가상 선택자</h1>
+
+ <div class="container">
+    <p>1번째 단락</p>
+    <p>2번째 단락</p>
+    <p>3번째 단락</p>
+ </div>   
+<div class="container">
+    <p>1번째 단락</p>
+    <p>2번째 단락</p>
+    <p>3번째 단락</p>
+    <p>4번쨰 단락</p>
+    <p>5번째 단락</p>
+</div>
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>제목</th>
+            <th>제목</th>
+            <th>제목</th>
+            <th>제목</th>
+            <th>제목</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
