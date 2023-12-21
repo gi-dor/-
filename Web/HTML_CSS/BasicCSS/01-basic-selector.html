@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    /* 태그 선택자 */
+    h1{color: red;}
+    p{color: blue;}
+
+
+    /* 클래스 선택자  */
+    /* color는 자식 요소에도 상속된다. */
+    .description{color: orange;
+    font-style: italic;}
+
+    /* ID 선택자 */
+    #intro {
+        color: green;
+    }
+</style>
+</head>
+<body>
+<h1> 기본 선택자 연습</h1>
+<div class="container">
+    <p class="description" id="intro">첫번째 단락</p>
+    <p class="description" id="intro">두번째 단락</p>
+    <p class="description" id="intro">세번째 단락</p>
+</div>
+<div>
+    <p>첫번째 단락</p>
+    <p>두번째 단락</p>
+    <p>세번째 단락</p>
+</div>
+
+<p>네번째 단락</p>
+
+
+</body>
+</html>
