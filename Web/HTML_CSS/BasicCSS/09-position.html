@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+                margin: 0;
+        }
+
+        div{
+            border: 1px solid #ddd;
+            width: 150px;
+            height: 150px;
+        }
+
+        #box-1{
+            background-color: #ddd;
+        }
+
+        .relative-box {
+            background-color: lightgreen;
+            border:  1px solid red;
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        #box-2  {
+            position: relative;
+            left: 300px;
+            width: 400px;
+            height: 400px;
+            /* background-color: blueviolet; */
+            border: 5px solid #ddd;
+        }
+
+        #absolute-box-1{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            border: 1px solid red;
+        }
+
+        #absolute-box-2{
+            width: 150px;
+            height: 150px;
+            border: 1px solid red;
+            background-color: aqua;
+            position: absolute;
+            top: 100px;
+            left: 250px;
+        }
+
+        #box-3{
+            position:fixed;
+            background-color: magenta;
+            width: 100%;
+            height: 50px;
+            left: 0;
+        }
+
+
+        .box{
+        width: 100px; 
+        height: 100px;
+        position: absolute;
+        }a
+
+        .red {
+            background-color: red;
+        left: 50px;
+        top: 1000px;
+        z-index: 10;
+        }
+        .green{
+            background-color: green;
+            left: 100px;
+            top: 1050px;
+            z-index: 1;
+        }
+        .blue{
+            background-color: blue;
+            left: 150px;
+            top:1100px;
+            z-index: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>position</h1>
+
+    <h2>Relative</h2>
+
+    <div id = "box-1">
+        <div class="re
+    tlative-box"></div>
+        <div class="relative-box"></div>
+    </div>
+
+    <h2>Absolute</h2>
+    <div id="box-2">
+        <div id="absolute-box-1"></div>
+        <div id="absolute-box-2"></div>
+    </div>
+
+    <h2>Fixed</h2>
+    <div id="box-3">fixed box</div>
+
+    <h2>z-index</h2>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+</body>
+</html>
