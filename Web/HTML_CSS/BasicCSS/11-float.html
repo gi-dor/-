@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            color: wheat;
+            text-align: center;
+            padding: 10px;
+            /* overflow: hidden; */
+            background-color: lightcoral;
+        }
+
+        /* ::after 가상요소 선택자 
+            선택한 요소의 맨마지막 자식으로 가상요소 하나를 생성
+            보통 content 속성과 함꼐 사용
+            선택된 요소에 장식용 컨첸트를 추가할때 사용
+
+            floating 요소 2개를 가지고 있는 부모 요소에 가상요소를 추가 시킨다
+            추가된 가상요소는 컨텐츠는 "" 이고 , display속성은 블럭이기 떄문에
+            내용이 비어있는 블럭 요소가 하나 추가되는것
+
+            clear:both  는 추가된 가상요소의 왼쪽과 오른쪽에 floating 요소가 위치하지 못하게한다
+            추가된 가상요소가 floating된 요소의 끝에 위치하게 된다
+
+            부모요소는 floating 된 요소의 높이는 인지하지 못해서 
+            자신의 높이를 적절히 조절하지 못하지만 , 추가된 가상요소가 floating 된 요소의 끝에 위치하고 있기 때문에
+            그 가상요소를 감싸기 충분한 높이로 저절로 높이가 조절된다.
+        
+        
+        */
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+        .d1, .d2 {
+            float: left;
+            width: 50%;
+            padding:20px 0;
+        }
+
+        .d1{
+            background-color:coral;
+        }
+
+        .d2{
+            background-color: crimson ;
+        }
+
+        .d3{
+            padding: 20px;
+            background-color: gainsboro;
+            text-align: center;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+<div class="container clearfix">
+
+    <div class="d1">1</div>
+    <di class="d2">2</di>
+
+</div>
+ 
+<div class="d3">3</div>
+
+</body>
+</html>
