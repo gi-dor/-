@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* RESET CSS */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #f0f3f4;
+            color: #58666e;
+        }
+        
+        #wrap {
+            /* content 영역이 header영역과 겹쳐지지 않도록 header의 height 만큼 위쪽 바깥여백을 지정 */
+            margin-top: 60px;
+        }
+
+
+        header{
+            /* Header를 항단에 고정 */
+            position:fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 2000;
+            background-color: #fff;
+            /* box-shadow 효과 추가 */
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0,0, 0.05);
+        }
+
+
+            /* Navigation bar 우측정렬 */
+        nav{
+            float: right;
+        }
+
+        /* 로그 이미지를 수직으로 중앙정렬 */
+        .logo{
+            /* a태그를 inline-block으로 변경해서 height 와 margin을 지정할수 있게한다 */
+            display: inline-block;
+            height: 36px;
+            margin: 12px 0 12px 25px;
+        }
+
+        .logo > img {height: 36px;}
+
+
+        /* 클래스명 nav-items 내부에있는 li태그
+        수직정렬되어 있는 Navigation bar 를 수평으로 정렬 */
+        .nav-items > li {
+            display: inline-block;
+        }
+
+            /*글자의 자간을 Navigation bar의 높이와 동일하게 맟춰서 메뉴가 수직 중앙 정렬되게 한다.*/
+        .nav-items > li > a {
+        line-height: 60px;
+        padding: 0 30px;
+        color: rgba(0, 0, 0, 0.4);
+        }
+        /*링크에 마우스가 올라오면 텍스트 색이 변하게 한다.*/
+        .nav-items > li > a:hover {
+        color: rgba(0, 0, 0, 0.8);
+        }
+
+    
+
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        #content-wrap::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        aside{
+            /* aide 영역을 고정 시킨다 */
+            position: fixed;
+            top: 60px;
+            bottom: 0px;
+
+            width: 200px;
+            padding-top: 25px;
+            background-color: #333;
+        }
+
+        aside > ul > li > a {
+            display: block;
+            color: #fff;
+            padding: 10px 0 10px 20px;
+        }
+
+        aside > ul > li > a.active{
+            background-color: #4caf50;
+        }
+
+        aside > ul > li > a:hover:not(.active) {
+            background-color: #555;
+        }
+
+        aside > h1 {
+            padding: 20px 0 20px 20px;
+            color: #fff;
+        }
+
+
+        section{
+            float: right;
+            margin-left: 200px;
+        }
+
+        article{
+            margin: 10px;
+            padding: 15px;
+            background-color: white;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div id="wrap">
+        <header>
+            <a class="logo" href="/home">
+                <img src="https://poiemaweb.com/img/logo.png" height="36px" alt="">
+            </a>
+            
+            <nav>
+                <ul class="nav-items">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+
+                <div id="content-wrap">
+            <!--------- 컨텐츠에 대한 메뉴 아이템이나 부가정보 영역------- -->
+                    <aside>
+                        <h1>Aside</h1>
+                        <ul>
+                            <li><a href="#" class="active"></a></li>
+                            <li><a href="#" >London</a></li>
+                            <li><a href="#" >Paris</a></li>
+                            <li><a href="#" >Tokyo</a></li>
+                            <li><a href="#" >Newyork</a></li>
+                        </ul>
+                    </aside>
+
+
+            <!------------------ section은 컨텐츠 영역------------ -->
+            <!--------- section은 더 구체적인 article로 구분 --------->
+                    <section>
+                        <article id="london">
+                            <h1>London</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aspernatur vitae voluptatum eius, sunt dolorum ipsam debitis temporibus quibusdam perspiciatis iure eveniet vel fugiat quas sequi numquam cumque autem. Atque.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe iure qui, debitis cumque magni vel porro libero officiis, nisi, quam harum ducimus quae architecto error vitae similique facilis quod pariatur.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque obcaecati aut perferendis dolor! Et pariatur at, reiciendis fugiat vero odio sapiente dolore, necessitatibus voluptatem excepturi harum corrupti eveniet placeat unde.
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae a ex fuga praesentium facere, quam aliquid quibusdam sed dolorem dolores quae, numquam, minima earum maiores eligendi ab error magnam laudantium?
+                            </p>
+                        </article>
+                        <article id="tokyo">
+                            <h1>Tokyo</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci expedita suscipit, doloribus quibusdam sint similique, nisi accusamus distinctio aperiam corrupti quis vitae sapiente maxime. Amet saepe quos iure soluta natus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam rem aut quaerat quas laudantium nisi illum, optio ipsum dolorum laboriosam, blanditiis aliquid illo inventore earum maiores nemo nam? Placeat.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque eaque dolores, reiciendis voluptatibus nobis accusamus ipsa minus, commodi dolorem alias consequuntur ullam porro vitae sunt laudantium, laboriosam optio ea tempore?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam magni repudiandae vitae temporibus odit hic natus commodi sequi dolorem delectus suscipit quisquam similique laborum sunt, incidunt, quidem facilis dolore unde!
+                            </p>
+                        </article>
+                        <article id="newyork">
+                            <h1>뉴욕</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores asperiores eius, cum alias porro doloremque nisi ratione quo illo dignissimos iste consectetur omnis. Obcaecati harum, eveniet soluta doloribus ea voluptates!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis magnam iste id, eveniet dignissimos accusamus excepturi architecto facilis velit fuga minima qui ratione vero voluptates saepe. Minus veritatis quo deleniti?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis saepe repellendus recusandae expedita obcaecati modi vitae rerum minus hic nobis repellat aliquam iure minima odit sint eligendi, temporibus iste corrupti?
+                            </p>
+                        </article>
+                    </section>
+                </div>
+
+
+    </div>
+</body>
+</html>
