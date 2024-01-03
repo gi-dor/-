@@ -11,7 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<%@include file="include/navbar.jsp" %>
+<%--<%@include file="include/navbar.jsp" %>--%>
+<jsp:include page="include/navbar.jsp">
+    <jsp:param name="menu" value="register"/>
+</jsp:include>
+
 <div class="container">
     <div class="row">
         <h1>회원 가입</h1>
