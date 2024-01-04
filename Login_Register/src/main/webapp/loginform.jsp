@@ -50,6 +50,12 @@
                 <strong>로그인 실패</strong> , 탈퇴 처리된 사용자 아이디 입니다.
             </div>
             <%
+            } else if ("deny".equals(error)) {
+            %>
+            <div class="alert alert-danger">
+                <strong>로그인 필수</strong> , 로그인이 필요한 요청 입니다.
+            </div>
+            <%
                 }
             %>
 
