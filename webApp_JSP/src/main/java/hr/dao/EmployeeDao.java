@@ -7,6 +7,8 @@ import java.util.List;
 
 public class EmployeeDao {
 
+//    row_number() over(order by 컬럼명 desc) num
+//    - 지정된 컬럼명의 값을 기준으로 내림차순으로 행을 정렬하고 각 행에 순번을 부여한다
 
     public List<EmpListDto> getEmployees(int start, int end) {
         String sql = """
