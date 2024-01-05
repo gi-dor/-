@@ -6,6 +6,12 @@
  -->
 <sqlMapConfig>
     <!--
+        DAO 클래스에서 매핑된 SQL 구문을 지정할 때 , 네임스페이스를 사용하도록 설정
+     -->
+
+    <settings useStatementNamespaces="true"/>
+
+    <!--
     <transactionManager>
         트랜잭션 처리 방식을 지정하는 태그
     <dataSource>
@@ -23,4 +29,6 @@
 
     <sqlMap resource="ibatis/mappers/boards.xml"/>
     <sqlMap resource="ibatis/mappers/users.xml"/>
+    <sqlMap resource="ibatis/mappers/todos.xml"/>
+    <sqlMap resource="ibatis/mappers/todo-categories.xml"/>
 </sqlMapConfig>   
