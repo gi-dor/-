@@ -4,7 +4,7 @@
         PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
         "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 
-<sqlMap>
+<sqlMap namespace="boards">
     <!--
        id="insertBoard"
           이 SQL 구문의 식별자를 지정한다
@@ -36,9 +36,9 @@
           paramMap.put("begin",1);
           paramMap.put("end",1);
 
-       resultClass="vo.Board"
-          이 SQL구문을 실행해서 획득된 조회 결과의 각 행은 Board객체를 생성해서
+       resultClass="vo.Board"각 행은 Board객체를 생성해서
           한 행씩 저장한다
+          이 SQL구문을 실행해서 획득된 조회 결과의
      -->
     <select id="getBoards" parameterClass="map" resultClass="vo.Board">
         SELECT A.BOARD_NO as no,
