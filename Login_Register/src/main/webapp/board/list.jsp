@@ -93,7 +93,9 @@
                 <tr>
                     <td><%=board.getNo() %>
                     </td>
-                    <td><%=board.getTitle() %>
+                    <td><a href="detail.jsp?no=<%= board.getNo() %>&page=<%= currentPage %>"><%= board.getTitle() %>
+
+                    </a>
                     </td>
                     <td><%=board.getUser().getName() %>
                     </td>
