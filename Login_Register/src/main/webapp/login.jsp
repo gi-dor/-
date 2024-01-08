@@ -54,7 +54,7 @@
         return;
     }
 
-    // 7. 사용자 인증작업이 완료된 사용자 정보를 세션객체에 속성ㅇ로 저장
+    // 7. 사용자 인증 작업이 완료된 사용자 정보를 세션객체에 속성으로 저장
     LoginUser loginUser = new LoginUser();
     loginUser.setName(savedUser.getName());
     loginUser.setNo(savedUser.getNo());
