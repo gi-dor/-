@@ -26,23 +26,23 @@
 
     <select id="getTodos" parameterClass="map" resultClass="vo.Todo">
         select A.todo_no,
-               A.category_no        as "category.no",
-               B.category_name      as "category.name",
-               A.todo_title         as title,
-               A.todo_expected_date as expectedDate,
-               A.todo_status        as status,
-               A.todo_created_date  as createdDate
+        A.category_no as "category.no",
+        B.category_name as "category.name",
+        A.todo_title as title,
+        A.todo_expected_date as expectedDate,
+        A.todo_status as status,
+        A.todo_created_date as createdDate
         from (select ROW_NUMBER() over(order by todo_no desc) num , todo_no,
-                     category_no,
-                     todo_title,
-                     todo_expected_date,
-                     todo_status,
-                     todo_created_date
-              from comm_todos
-              where todo_deleted = 'N') A,
-             comm_todo_categories B
+        category_no,        <!---todo_no 컬럼을 기준으로 내림차순으로 정렬한 후 각 행에 고유한 순번을 num 컬럼에 부여하는 쿼리 -->
+        todo_title,         <!--- ROW_NUMBER()함수는 같은 값이여도 고유한 순번이 부여된다 -->
+        todo_expected_date,
+        todo_status,
+        todo_created_date
+        from comm_todos
+        where todo_deleted = 'N') A,
+        comm_todo_categories B
         where num between #begin# and #end#
-          and A.category_no = B.category_no
+        and A.category_no = B.category_no
         order by A.todo_no desc
 
     </select>
