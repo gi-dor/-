@@ -72,4 +72,24 @@
         WHERE BOARD_DELETED = 'N'
     </select>
 
+    <!--
+    id = getBoardByNo   SQL 구문 식별자
+    parameterClass ="int"  SQL구 구문 실행할 때 필요한 값의 타입 정의
+    resultClass = "vo.Board" SQL 구문의 실형결과를 저장할 객체다
+    -->
+    <select id="getBoardByNo" parameterClass="int" resultClass="vo.Board">
+        select b.board_no as no,
+               b.board_title        as title,
+               u.user_no            as "user.no",
+               u.user_name          as "user.name",
+               b.board_reply_cnt    as replyCnt,
+               b.board_content      as content,
+               b.board_created_date as createdDate,
+               b.board_updated_date as updatedDate
+        from comm_users u, comm_boards b
+        where b.board_no = #value#
+          and b.user_no = u.user_no
+
+    </select>
+
 </sqlMap>
