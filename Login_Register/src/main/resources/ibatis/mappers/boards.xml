@@ -83,6 +83,7 @@
                u.user_no            as "user.no",
                u.user_name          as "user.name",
                b.board_reply_cnt    as replyCnt,
+               b.board_deleted      as deleted,
                b.board_content      as content,
                b.board_created_date as createdDate,
                b.board_updated_date as updatedDate
@@ -91,5 +92,16 @@
           and b.user_no = u.user_no
 
     </select>
+
+    <update id="updateBoard" parameterClass="vo.Board">
+        update comm_boards
+        set board_title        = #title#,
+            board_content      = #content#,
+            board_reply_cnt    = #replyCnt#,
+            board_deleted      = #deleted#,
+            board_updated_Date = sysdate
+        where board_no = #no#
+    </update>
+
 
 </sqlMap>
