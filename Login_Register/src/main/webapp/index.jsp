@@ -32,7 +32,7 @@ include 지시어는 다른 JSP 페이지를 이 페이지에 포함시킨다.
 <div class="container">
     <div class="row">
         <div class="col-12 bg-light p-5">
-            <h1> 샘플 커뮤니티 </h1>
+            <h1> 인텔리제이 게시판 메인페이지 </h1>
             <p>회원가입 . 로그인 . 로그아웃 .게시판 . 댓글 . 검색 . 첨부파일 - 업로드,다운로드</p>
         </div>
     </div> <!--- <div class="row"> --->
