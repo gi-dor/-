@@ -9,7 +9,7 @@
     <insert id="insertReply" parameterClass="vo.Reply">
         insert into comm_board_replies
             (reply_no, user_no, board_no, reply_content)
-        values (replies_seq.nextval, #user.no#, #baord.no#, #content#)
+        values (replies_seq.nextval, #user.no#, #board.no#, #content#)
     </insert>
 
     <select id="getRepliesByBoardNo" parameterClass="int" resultClass="vo.Reply">
