@@ -127,20 +127,23 @@ public class Dept {
 </insert>
 ```
 
-- <'insert'>
+- ````<insert>````
     + INSERT SQL구문 정의
 
 
-- id = "insertDepartment"
+- ```id = "insertDepartment"```
     + INSERT SQL 구문을 식별하는 ID 값 지정
 
 
-- parameterClass = "vo.Dept"
+- ```parameterClass = "vo.Dept"```
     + INSERT SQL 구문을 실행하는데 필요한 vo.Dept 객체에 담아서 parameter 값으로 제공하는다는 것을 지정
 
 
-- #id# - 파라미터로 전달받을 vo.dept 객체의 id 멤버변수에 저장된 값이 치환될 위치를 지정
-- #name# - 파라미터로 전달받을 vo.dept 객체의 name 멤버변수에 저장된 값이 치환될 위치를 지정
+- `````#id# `````
+    - 파라미터로 전달받을 vo.dept 객체의 id 멤버변수에 저장된 값이 치환될 위치를 지정
+
+- ``` #name# ```
+    - 파라미터로 전달받을 vo.dept 객체의 name 멤버변수에 저장된 값이 치환될 위치를 지정
 
 
  
