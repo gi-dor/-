@@ -37,7 +37,7 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/index.jsp">샘플 커뮤니티</a>
+        <a class="navbar-brand" href="/index.jsp">인텔리제이 커뮤니티</a>
         <ul class="navbar-nav me-auto">
             <li class="nav-item">
                 <a class="nav-link <%="home".equals(menu) ? "active" : "" %>" href="/index.jsp">홈</a>
@@ -46,16 +46,31 @@
                 <a class="nav-link <%="board".equals(menu) ? "active" : "" %>" href="/board/list.jsp">게시판</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%="todo".equals(menu) ? "active" : "" %>" href="/todo/list.jsp">일정관리</a>
+                <a class="nav-link <%="todo".equals(menu) ? "active" : "" %>" href="/todo/list.jsp">일정 관리</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <%="todo".equals(menu) ? "active" : "" %>" href="/file/list.jsp">파일 게시판</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <%="product".equals(menu) ? "active" : "" %>" href="/product/list.jsp">상품 게시판</a>
             </li>
         </ul>
+
+        <%
+            if (loginUser != null) {
+        %>
+        <span class="navbar-text me-3 small">
+			<strong class="text-white"><%=loginUser.getName() %></strong>님 환영합니다
+		</span>
+        <%
+            }
+        %>
+
 
         <ul class="navbar-nav">
             <%
                 if (loginUser == null) {
             %>
-
-
             <li class="nav-item">
                 <a class="nav-link <%="login".equals(menu) ? "active" : "" %>" href="/loginform.jsp">로그인</a>
             </li>
