@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sqlMap
+        PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="product">
+
+    <select id="getProducts" resultClass="dto.Product">
+        SELECT PRODUCT_NO as no,
+               PRODUCT_NAME             as name,
+               PRODUCT_MAKER            as maker,
+               PRODUCT_DESCRIPTION      as description,
+               PRODUCT_PRICE            as price,
+               PRODUCT_DISCOUNT_PRICE   as discountPrice,
+               PRODUCT_ON_SELL          as onSell,
+               PRODUCT_STOCK            as stock,
+               PRODUCT_UPDATE_DATE      as updateDate,
+               PRODUCT_CREATE_DATE      as createDate
+
+        FROM web_product
+        order by product_no desc
+    </select>
+
+    <insert id="insertProduct" parameterClass="dto.Product">
+        insert into web_product
+        (product_no,
+         product_name,
+         product_maker,
+         product_description,
+         product_price,
+         product_discount_price,
+         product_stock)
+        values (WEB_PRODUCTS_SEQ.nextval, #name#, #maker#, #description#, #price#, #discountPrice#, #stock#)
+    </insert>
+
+    <select id="getProductByNo" parameterClass="int" resultClass="dto.Product">
+        select PRODUCT_NO as no,
+               PRODUCT_NAME           as name,
+               PRODUCT_MAKER          as maker,
+               PRODUCT_DESCRIPTION    as description,
+               PRODUCT_PRICE          as price,
+               PRODUCT_DISCOUNT_PRICE as discountPrice,
+               PRODUCT_ON_SELL        as onSell,
+               PRODUCT_STOCK          as stock,
+               PRODUCT_UPDATE_DATE    as updateDate,
+               PRODUCT_CREATE_DATE    as createDate
+        from web_product
+        where PRODUCT_NO = #value#
+        order by PRODUCT_NO desc
+    </select>
+
+    <delete id="deleteProductByNo" parameterClass="int">
+        delete
+        from web_product
+        where PRODUCT_NO = #value#
+    </delete>
+
+</sqlMap>
