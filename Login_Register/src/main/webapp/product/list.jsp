@@ -80,7 +80,7 @@
             </table>
 
             <div class="text-end">
-                <a href="form.jsp" class="btn btn-primary">새 상품 등록</a>
+                <a href="form.jsp" class="btn btn-dark">새 상품 등록</a>
             </div>
         </div>
     </div>
