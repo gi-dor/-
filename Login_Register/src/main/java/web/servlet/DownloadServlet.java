@@ -1,4 +1,4 @@
-package web;
+package web.servlet;
 
 import dao.FileBoardDao;
 import java.io.File;
