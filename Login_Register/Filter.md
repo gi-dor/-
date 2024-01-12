@@ -46,7 +46,7 @@ public class LoginCheckFilter implements Filter {
 
 <filter>
     <filter-name> logincheck</filter-name>
-    <filter-class>web.LoginCheckFilter</filter-class>
+    <filter-class>web.filter.LoginCheckFilter</filter-class>
     <init-param>
         <param-name>attributeName</param-name>
         <param-value>LOGIN_USER</param-value>
