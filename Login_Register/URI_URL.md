@@ -4,13 +4,13 @@
 2. 인터넷에 있는 자원을 나타내는 유일한 **주소**
 
     - 아래의 주소는 URI
-    - 아래 주소 ```web.DownloadServlet``` 작원의 실행에 요청하는 유일한 식별자 주소다
-    - ```web.DownloadServlet``` 자원의 실제위치를 나타나지 않는다
+    - 아래 주소 ```web.servlet.DownloadServlet``` 작원의 실행에 요청하는 유일한 식별자 주소다
+    - ```web.servlet.DownloadServlet``` 자원의 실제위치를 나타나지 않는다
 
 -
 
 ```
-http://localhost/comm/file/download   ---->  web.DownloadServlet
+http://localhost/comm/file/download   ---->  web.servlet.DownloadServlet
 ```
 
 ### 🔸 URL
