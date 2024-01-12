@@ -49,7 +49,7 @@
                 <a class="nav-link <%="todo".equals(menu) ? "active" : "" %>" href="/todo/list.jsp">일정 관리</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%="todo".equals(menu) ? "active" : "" %>" href="/file/list.jsp">파일 게시판</a>
+                <a class="nav-link <%="file".equals(menu) ? "active" : "" %>" href="/file/list.jsp">파일 관리</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link <%="product".equals(menu) ? "active" : "" %>" href="/product/list.jsp">상품 게시판</a>
