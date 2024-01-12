@@ -1,5 +1,8 @@
+<%@page import="dto.LoginUser" %>
+<%@page import="java.util.Set" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -31,9 +34,42 @@ include 지시어는 다른 JSP 페이지를 이 페이지에 포함시킨다.
 
 <div class="container">
     <div class="row">
-        <div class="col-12 bg-light p-5">
-            <h1> 인텔리제이 게시판 메인페이지 </h1>
+        <div class="col-9 bg-light p-5">
+            <h1> 인텔리제이 커뮤니티 </h1>
             <p>회원가입 . 로그인 . 로그아웃 .게시판 . 댓글 . 검색 . 첨부파일 - 업로드,다운로드</p>
+        </div>
+        <div class=col-3>
+
+            <%
+                Set<LoginUser> set = (Set) application.getAttribute("LOGIN_USERS");
+            %>
+
+            <div class="card">
+                <div class="card-header">현재 접속한 사용자</div>
+                <div class="card-body">
+                    <%
+                        if (set == null || set.isEmpty()) {
+                    %>
+                    <p class="card-text">로그인된 사용자가 없습니다</p>
+                    <%
+                    } else {
+                    %>
+                    <ul class="list-group">
+                        <%
+                            for (LoginUser loginUser : set) {
+                        %>
+                        <li class="list-group-item"><%=loginUser.getName() %>
+                        </li>
+
+                        <%
+                            }
+                        %>
+                    </ul>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
         </div>
     </div> <!--- <div class="row"> --->
 
