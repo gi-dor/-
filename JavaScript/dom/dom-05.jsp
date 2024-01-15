@@ -17,6 +17,23 @@
     <div class="col-12">
         <h2> 폼 요소 </h2>
 
+        <%--        <%--%>
+        <%--            List<Status> statusList = dao.getAllStatus();--%>
+        <%--            for (Status s : statusList) {--%>
+
+        <%--        %>--%>
+
+        <%--        <div class="form-check">--%>
+        <%--            <input type="radio" class="form-check-input" name="status" id="status-<%s.getNo()%>"--%>
+        <%--                   value="<%= s.getNo()%>"/>--%>
+        <%--            <label class="form-check-label"><%=s.getNo()%>--%>
+        <%--            </label>--%>
+        <%--        </div>--%>
+        <%--        <%--%>
+        <%--            }--%>
+        <%--        %>--%>
+
+
         <form>
             <div class="form-group">
                 <label class="form-label">카테고리</label>
@@ -41,7 +58,41 @@
 
             <div class="form-group">
                 <label class="form-label"> 메모 </label>
-                <textarea class="form-control" rows="4" name="memo">부디 오래 걸리지 않게 , cause i'm a ribbon </textarea>
+                <textarea class="form-control" rows="4" name="memo"> ribbon </textarea>
+            </div>
+
+            <div>
+                <label class="form-label"> 상태 </label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="status-300" name="status" value="300">
+                    <label class="form-check-label">입고예정</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="status-301" name="status" value="301" checked>
+                    <label class="form-check-label">판매중</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="status-302" name="status" value="302">
+                    <label class="form-check-label">재고없음</label>
+                </div>
+            </div>
+
+
+            <div>
+                <label class="form-label">이벤트 </label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="event-700" name="event" value="700" checked>
+                    <label class="form-check-label">무료배송</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="event-701" name="event" value="701"
+                           checked="checked">
+                    <label class="form-check-label">당일배송</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="event-702" name="event" value="702">
+                    <label class="form-check-label">카드 할인</label>
+                </div>
             </div>
 
 
@@ -86,6 +137,28 @@
     console.log(value3);
 
     let el4 = document.querySelector("textarea[name='memo']");
+    let value4 = el4.value;
+    console.log(value4);
+
+    // radio 버튼 중에서 특정 라디오 버튼을 체크하기
+    let el5 = document.querySelector("#status-301")
+    el5.checked = true;
+
+    // radio 버튼 중에서 체크된 라디오 버튼의 값을 조회
+    let el6 = document.querySelector("input[name=status]:checked");
+    let value6 = el6.value;
+    console.log(value6);
+
+    // 모든 체크박스 선택해제
+    let eventNodeList = document.querySelectorAll("input[name=event]");
+
+    // eventNodeList -> [checkbox엘리먼트 , checkbox엘리먼트 , checkbox 엘리먼트]
+
+    for (let index = 0; index < eventNodeList.length; index++) {
+        let checkbox = eventNodeList[index];
+        checkbox.checked = false;
+    }
+
 </script>
 </body>
 </html>
