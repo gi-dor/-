@@ -60,7 +60,7 @@
             %>
 
 
-            <form class="border bg-light p-3 " method="post" action="login.jsp">
+            <form class="border bg-light p-3 " method="post" action="login.jsp" onsubmit="checkForm(event)">
                 <div class="form-group mb-3">
                     <label class="form-label">Id</label>
                     <input type="text" class="form-control" name="id"/>
@@ -78,6 +78,33 @@
     </div>
 
 </div>
+<script type="text/javascript">
+
+    function checkForm(event) {
+        // 1. 아이디 , 비밀번호 입력필드 엘리먼트를 조회한다
+        let idInput = document.querySelector("input[name=id]");
+        let passwordInput = document.querySelector("input[name=password]");
+
+        // 2. 아이디 , 비밀번호 입력필드의 값 조회
+        let id = idInput.value.trim();
+        let pw = passwordInput.value.trim();
+
+        // 3. 아이디 , 비밀번호 값을 체크
+        if (id === "") {
+            alert("아이디를 입력하세요");
+            event.preventDefault();
+            return;
+        }
+
+        if (pw === "") {
+            alert("비밀번호를 입력하세요");
+            event.preventDefault();
+            return;
+        }
+    }
+
+
+</script>
 
 </body>
 </html>
