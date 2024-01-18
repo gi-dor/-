@@ -54,6 +54,9 @@
             <li class="nav-item">
                 <a class="nav-link <%="product".equals(menu) ? "active" : "" %>" href="/product/list.jsp">상품 게시판</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link <%="hr".equals(menu) ? "active" : "" %>" href="/hr/dept.jsp">인사관리</a>
+            </li>
         </ul>
 
         <%
