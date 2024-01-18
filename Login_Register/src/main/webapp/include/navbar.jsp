@@ -49,13 +49,18 @@
                 <a class="nav-link <%="todo".equals(menu) ? "active" : "" %>" href="/todo/list.jsp">일정 관리</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%="file".equals(menu) ? "active" : "" %>" href="/file/list.jsp">파일 관리</a>
+                <a class="nav-link <%="file".equals(menu) ? "active" : "" %>" href="/file/list.jsp">파일 게시판</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%="product".equals(menu) ? "active" : "" %>" href="/product/list.jsp">상품 게시판</a>
+                <a class="nav-link <%="product".equals(menu) ? "active" : "" %>" href="/product/list.jsp">상품
+                    게시판</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link <%="hr".equals(menu) ? "active" : "" %>" href="/hr/dept.jsp">인사관리</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link <%="movie".equals(menu) ? "active" : "" %>" href="/boxoffice/search.jsp">박스
+                    오피스</a>
             </li>
         </ul>
 
@@ -74,6 +79,8 @@
             <%
                 if (loginUser == null) {
             %>
+
+
             <li class="nav-item">
                 <a class="nav-link <%="login".equals(menu) ? "active" : "" %>" href="/loginform.jsp">로그인</a>
             </li>
