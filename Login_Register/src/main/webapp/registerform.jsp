@@ -123,17 +123,29 @@
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                let message = xhr.responseText;
-                if (message === "exist") {
+                // 서버가 보낸 응답데이터를 조회한다
+                // 응답데이터 -> {"exist":true , "id":"hong"}
+                let jsontext = xhr.responseText;
+                console.log('json 텍스트', jsontext);
+
+                // 응답으로 받은 json 텍스트를 자바스크립트 객체나 배열로 변환하기
+                // result -> {exist:true, id:"rltjs987"}
+                // result에는 자바스크립트 객체가 대입된다.
+                let result = JSON.parse(jsontext);
+                // console.log(result,result.id , result.exist);
+
+
+                if (result.exist) {
                     feedbackDiv.textContent = '이미 사용중인 아이디 입니다'
                     feedbackDiv.classList.remove('text-success');
                     feedbackDiv.classList.add('text-danger');
 
-                } else if (message == "none") {
+                } else {
                     feedbackDiv.textContent = '사용가능한 아이디 입니다.'
                     feedbackDiv.classList.remove('text-danger');
                     feedbackDiv.classList.add('text-success');
                 }
+
             }
         }
 
