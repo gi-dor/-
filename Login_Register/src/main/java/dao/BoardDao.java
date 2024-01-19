@@ -28,8 +28,8 @@ public class BoardDao {
      * @return 전체 행 갯수
      * @throws SQLException
      */
-    public int getTotalRows() throws SQLException {
-        return (Integer) ibatis.queryForObject("boards.getTotalRows");
+    public int getTotalRows(Map<String, Object> param) throws SQLException {
+        return (Integer) ibatis.queryForObject("boards.getTotalRows", param);
 
     }
 
