@@ -34,4 +34,5 @@
     <sqlMap resource="ibatis/mappers/todos.xml"/>
     <sqlMap resource="ibatis/mappers/todo-categories.xml"/>
     <sqlMap resource="ibatis/mappers/products.xml"/>
-</sqlMapConfig>   
+    <sqlMap resource="ibatis/mappers/hr.xml"/>
+</sqlMapConfig>
