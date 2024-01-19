@@ -55,15 +55,15 @@
 
 
     <!--  에러페이지 설정하기 -->
-    <error-page>
-        <error-code>404</error-code>
-        <location>/error/404.jsp</location>
-    </error-page>
+    <!--    <error-page>-->
+    <!--        <error-code>404</error-code>-->
+    <!--        <location>/error/404.jsp</location>-->
+    <!--    </error-page>-->
 
-    <!-- 서버 에러 페이지 설정 -->
-    <error-page>
-        <error-code>500</error-code>
-        <location>/error/server.jsp</location>
-    </error-page>
+    <!--    &lt;!&ndash; 서버 에러 페이지 설정 &ndash;&gt;-->
+    <!--    <error-page>-->
+    <!--        <error-code>500</error-code>-->
+    <!--        <location>/error/server.jsp</location>-->
+    <!--    </error-page>-->
 
 </web-app>
