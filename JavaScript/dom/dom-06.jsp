@@ -110,7 +110,7 @@
 
         // 2. 새로 추가할 자식 엘리먼트를 생성한다
         let child = document.createElement("input"); // <input> 엘리먼트 (태그) 생성
-        child.setAttribute("type", "ntext");			// <input type="text"> 속성 추가
+        child.setAttribute("type", "text");			// <input type="text"> 속성 추가
         child.setAttribute("name", "username"); 		// <input type="text" name="username"> 속성 추가
         child.value = "헌원";							// input 엘리먼트의 value 프로퍼티 값 설정
 
