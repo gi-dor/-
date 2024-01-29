@@ -82,6 +82,7 @@
 
     function checkForm(event) {
         // 1. 아이디 , 비밀번호 입력필드 엘리먼트를 조회한다
+        // querySelector 는 CSS선택자를 사용해 엘리먼트를 찾는다
         let idInput = document.querySelector("input[name=id]");
         let passwordInput = document.querySelector("input[name=password]");
 
