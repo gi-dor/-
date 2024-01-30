@@ -80,6 +80,7 @@
 </div>
 <script type="text/javascript">
 
+    // 매개변수 event는 ,키보드 , 마우스 , 여러 이벤트를 담당한다고 한다
     function checkForm(event) {
         // 1. 아이디 , 비밀번호 입력필드 엘리먼트를 조회한다
         // querySelector 는 CSS선택자를 사용해 엘리먼트를 찾는다
@@ -90,6 +91,8 @@
         let id = idInput.value.trim();
         let pw = passwordInput.value.trim();
 
+
+        // event.preventDefault() 사용시 submit 이벤트시 action에있는 페이지로 이동하지 않게 해준다.
         // 3. 아이디 , 비밀번호 값을 체크
         if (id === "") {
             alert("아이디를 입력하세요");
