@@ -39,12 +39,7 @@ url-path --> /product/detail.jsp
 query-string  --> no=10000&page=3
 ```
 
-```http://www.shop.com:80/product/detail.jsp?no=10000&page=3``` 는 URL
-```http://www.shop.com:80/product/detail.jsp?no=10000&page=3``` 는 UTL이 아니다
-
-- ?no=1000&page=3이 자원의 위치를 나타내는 저보가 아니기 떄문
-- no는 상품번호가 10000이고 페이지번호가 3인 정보를 요청하는 것을 식별하는 용도로 사용되기 때문
+- ```?no=1000&page=3``` 은 자원의 위치를 나타내는 정보가 아니다
+- no는 상품번호가 10000이고 페이지 번호가 3인 정보를 요청하는 것을 식별하는 용도로 사용된다
 - URL은 URI의 부분집합이기 때문에 URL은 전부 URI 라고 할수 있다
--
 
-<img src="https://github.com/gi-dor/HTA_Eclipse/assets/86302876/5a30b2d6-2674-42c7-a73f-54eb242ccd79"/>
